@@ -27,7 +27,7 @@ func InitTrie() *Trie {
 func (t *Trie) Insert(s string) {
 	currNode := t.root
 	for _, v := range s {
-		charIndex := v - 'a' // Interseting part where we find index by subtracting unicode value of 'a' from the current string
+		charIndex := v - 'a' // Interseting part where we find index by subtracting ASCII value of 'a' from the current string
 		if currNode.children[charIndex] == nil {
 			currNode.children[charIndex] = &Node{}
 		}
